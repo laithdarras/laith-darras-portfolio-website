@@ -2,86 +2,309 @@
     This is a comment in css
 */
 
-/* Resetting values */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
+@import url(https://fonts.google.com/specimen/Indie+Flower?category=Handwriting);
 
-/* styling */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-align: center;
+  background: rgb(255, 255, 255);
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #f0f0f0;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+/* Custom CSS */
+@import url(https://fonts.google.com/specimen/Montserrat?category=Sans+Serif,Display);
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: rgb(65, 65, 65);
+  background-color: rgb(240, 240, 240);
+  font-family: "Montserrat", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: left;
+}
+
+header,
+main,
+footer,
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  width: min(90%, 1000px);
+  gap: 2rem;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  margin: 6rem auto 4.5rem;
 }
 
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a:hover {
-    color: #f8b400
-}
-
-.section {
-    padding: 40px 0;
-}
-
-.project {
-    margin-bottom: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.project h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.project p {
-    color: #777;
+main {
+  margin: 3rem auto;
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #fff;
-    box-shadow: 0px -2px 5px rgba(0,0,0,0.1);
+  margin: 4.5rem auto 6rem;
 }
 
-@media (max-width: 768px) {
-    header {
-        text-align: center;
-    }
+div {
+  gap: 1rem;
+}
 
-    nav ul {
-        text-align: center;
-    }
+h1 {
+  font-size: 1.8rem;
+}
 
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
+h2 {
+  font-size: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+figcaption,
+p,
+a,
+li,
+input,
+blockquote {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.date {
+  font-size: 0.75rem;
+}
+
+h1,
+h2,
+.title {
+  font-weight: bold;
+}
+
+blockquote,
+em,
+.date {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border-width: 0;
+  background-color: transparent;
+}
+
+a:link,
+a:visited {
+  color: rgb(52, 129, 253);
+}
+
+a:hover,
+button:hover {
+  opacity: 0.5;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.icon {
+  width: 2rem;
+  height: auto;
+  object-fit: contain;
+}
+
+img,
+video,
+iframe {
+  object-fit: contain;
+  height: 12rem;
+  width: auto;
+  max-width: min(90%, 1000px);
+}
+
+ol,
+ul {
+  text-align: left;
+}
+
+blockquote,
+ul {
+  margin-left: 2rem;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 0.5rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.tc {
+  text-align: center;
+}
+
+.ac {
+  align-items: center;
+}
+
+.logo {
+  width: 3rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.horiz {
+  flex-direction: row;
+}
+
+.jc {
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nlm {
+  margin-left: 0;
+}
+
+.sb {
+  justify-content: space-between;
+}
+
+.ntm {
+  margin-top: 0;
 }
