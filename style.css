@@ -92,6 +92,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  align-items: center;
   text-align: center;
   background: rgb(255, 255, 255);
 }
@@ -115,6 +116,8 @@ body {
 ol,
 ul {
   list-style: none;
+  list-style-position: inside;
+  text-align: center;
 }
 blockquote,
 q {
@@ -203,7 +206,9 @@ blockquote {
 .date {
   font-size: 0.75rem;
 }
-
+h1{
+  font-size: 32px;
+}
 h1,
 h2,
 .title {
@@ -235,6 +240,12 @@ button:hover {
   opacity: 0.5;
   transition: 0.1s;
   cursor: pointer;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
