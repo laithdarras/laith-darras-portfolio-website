@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
+    "build": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laithdarras/laith-darras-portfolio-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laithdarras/laith-darras-portfolio-website/issues"
+  },
+  "homepage": "https://github.com/laithdarras/laith-darras-portfolio-website#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.17"
+  }
+}

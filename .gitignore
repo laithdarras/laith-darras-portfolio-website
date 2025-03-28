@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+
+# Tailwind output
+src/styles/output.css
+
+# Windows system files
+Thumbs.db
+
+# Mac system files (just in case)
+.DS_Store
