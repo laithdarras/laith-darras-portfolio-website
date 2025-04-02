@@ -1,19 +1,20 @@
-# Laith Darras – Personal Portfolio
+# Laith Darras – Portfolio Website
 
-This is the source code for my personal website, built to showcase my work, projects, and blog posts.  
-You can view the live version at [laith.vercel.app](https://laith.vercel.app/)
-
----
-
-## Built With
-
-- **HTML**
-- **JavaScript**
-- **Tailwind CSS**
+This is my personal portfolio built with **HTML**, **JavaScript**, and **Tailwind CSS**. It's deployed on [Vercel](https://laith.vercel.app) and structured as a clean website.
 
 ---
 
-## Features
+## Tech Stack
 
-- Project portfolio with live links
-- Blog posts documenting my journey
+- HTML + JS (Vanilla)
+- Tailwind CSS (v3.x, using CLI)
+- PostCSS + Autoprefixer
+- Live Server (local dev)
+- Deployed via Vercel
+
+---
+
+## Local Development side notes for me
+
+- ALWAYS work inside the `public/` directory when using `live-server` command to view website w/o pushing to production!
+- run `npm run build` when ready to deploy
