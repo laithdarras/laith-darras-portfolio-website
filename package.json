@@ -18,7 +18,7 @@
     "url": "https://github.com/laithdarras/laith-darras-portfolio-website/issues"
   },
   "homepage": "https://github.com/laithdarras/laith-darras-portfolio-website#readme",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.0"
