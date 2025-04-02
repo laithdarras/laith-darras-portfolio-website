@@ -4,8 +4,8 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
-  "dev": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
-  "build": "tailwindcss -i src/styles/input.css -o src/styles/output.css --minify"
+    "dev": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
+    "build": "tailwindcss -i src/styles/input.css -o src/styles/output.css --minify"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   "homepage": "https://github.com/laithdarras/laith-darras-portfolio-website#readme",
   "dependencies": {
     "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.3"
+  },
+  "devDependencies": {
     "tailwindcss": "^4.1.0"
   }
 }
