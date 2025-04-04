@@ -2,7 +2,7 @@
 node_modules/
 
 # Tailwind output
-src/styles/output.css
+public/styles/output.css
 
 # Windows system files
 Thumbs.db
