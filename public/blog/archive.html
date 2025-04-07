@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Laith Darras</title>
+  <title>Archive – Laith Darras</title>
   <link rel="stylesheet" href="/styles/output.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
   <!-- SEO -->
-  <meta name="description" content="About Laith Darras – Computer Science & Engineering Student" />
-  <meta property="og:title" content="Laith Darras – About" />
+  <meta name="description" content="Blog Archive – Laith Darras" />
+  <meta property="og:title" content="Blog Archive – Laith Darras" />
   <meta property="og:image" content="/images/preview.png" />
-  <meta property="og:url" content="https://laith.vercel.app/about.html" />
+  <meta property="og:url" content="https://laith.vercel.app/blog/archive.html" />
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
 
@@ -39,34 +39,30 @@
     </div>
   </nav>
 
+  <!-- Archive Section -->
   <section class="w-full py-20">
-    <div class="max-w-5xl mx-auto px-6">
-      <h1 class="text-3xl font-bold mb-8">About</h1>
-  
-      <p class="mb-6 text-[17px] text-gray-800 dark:text-gray-300">
-        Hey, I’m Laith - a Computer Science & Engineering student based in California.
-        I was born and raised here, and I’ve always loved taking things apart to understand how they work.
-        That curiosity is what first pulled me into tech.
-      </p>
-  
-      <p class="mb-6 text-[17px] text-gray-800 dark:text-gray-300">
-        Lately, I've been drawn to secure software, AI, and building things that are can help others.
-        I’ve been focused on growing my skills, working with others, and learning how to turn ideas into something real.
-      </p>
-  
-      <p class="mb-6 text-[17px] text-gray-800 dark:text-gray-300">
-        Outside of coding, you'll find me lifting heavy, running marathons, training jiu-jitsu, experimenting in the kitchen,
-        or reading something interesting. I’m always curious and always trying to get a little better.
-      </p>
-  
-      <p class="text-[17px] text-gray-800 dark:text-gray-300">
-        That’s a bit about me - feel free to reach out through any of the links on my homepage.  
-        I read and reply to every message.
-        <br>
-        Until then, thanks for stopping by.
-      </p>
+    <div class="max-w-5xl mx-auto px-6 text-left">
+      <h1 class="text-3xl font-bold mb-4">Archive</h1>
+      
+      <!-- Optional intro -->
+      <!-- <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">Filters: all, life, projects, tech, misc</p> -->
+
+      <ul class="space-y-3 text-lg">
+        <li>
+          <span class="text-gray-500 dark:text-gray-400">07 April 2025 – </span>
+          <a href="/blog/hello-world.html" class="text-teal-600 hover:underline">Hello World!</a>
+        </li>
+
+        <!-- Add future posts below in this format -->
+        <!--
+        <li>
+          <span class="text-gray-500 dark:text-gray-400">[DATE] – </span>
+          <a href="/blog/[slug].html" class="text-teal-600 hover:underline">[Post Title]</a>
+        </li>
+        -->
+      </ul>
     </div>
-  </section>  
+  </section>
 
   <script>
     const toggle = document.getElementById('theme-toggle');
