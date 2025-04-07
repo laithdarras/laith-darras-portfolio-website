@@ -9,3 +9,5 @@ Thumbs.db
 
 # Mac system files (just in case)
 .DS_Store
+
+/public/blog/template.txt
