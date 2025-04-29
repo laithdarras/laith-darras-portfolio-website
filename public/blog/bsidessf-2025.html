@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSidesSF 2025 – Laith Darras</title>
+  <link rel="stylesheet" href="/styles/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- SEO -->
+  <meta name="description" content="Full weekend recap of my experience at BSidesSF 2025, one of the top cybersecurity conferences in the Bay Area." />
+  <meta property="og:title" content="BSidesSF 2025 – Laith Darras" />
+  <meta property="og:image" content="/images/preview.png" />
+  <meta property="og:url" content="https://laith.vercel.app/blog/bsidessf-2025.html" />
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+  <!-- Nav Bar -->
+  <nav class="w-full pt-8 pb-4 text-2xl text-gray-700 dark:text-gray-200 sticky top-0 bg-gray-50 dark:bg-gray-800 z-50">
+    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+      <a href="/index.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Home">
+        <i class="fas fa-home"></i>
+      </a>
+      <div class="flex gap-6">
+        <a href="/about.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="About">
+          <i class="fas fa-user"></i>
+        </a>
+        <a href="/projects.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Projects">
+          <i class="fas fa-code"></i>
+        </a>
+        <a href="/blog.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Blog">
+          <i class="fas fa-pen-nib"></i>
+        </a>
+      </div>
+      <button id="theme-toggle" class="hover:text-teal-600 transition" title="Toggle Dark Mode">
+        <i id="theme-icon" class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Blog Post Content -->
+  <section class="w-full py-20">
+    <div class="max-w-5xl mx-auto px-6 text-left">
+
+      <!-- Top Buttons -->
+      <div class="flex justify-between items-center mb-6 text-sm">
+        <a href="/blog.html" class="text-teal-600 hover:underline">Back to Blog</a>
+        <a href="/blog/archive.html" class="text-teal-600 hover:underline">View Archive →</a>
+      </div>
+
+      <!-- Blog Header -->
+      <h1 class="text-3xl font-bold mb-2">BSidesSF 2025</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">28 April 2025</p>
+
+      <!-- Blog Article -->
+      <article class="prose dark:prose-invert max-w-none text-left space-y-6">
+        <hr/>
+      
+        <h2>Background</h2>
+        <p>This past weekend, I went to BSidesSF 2025 in San Francisco. The conference was held at City View at Metreon, 
+          right in downtown SF, overlooking Yerba Buena Park. It's one of the largest community-driven security conferences 
+          in the area, and it brings a great mix of professionals, students, researchers, and hackers together.</p>
+        <div class="flex flex-col items-center my-8">
+          <img src="/images/me-at-bsides.jpg" alt="me at bsides" class="w-3/4 max-w-md rounded-lg shadow-md mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">Me at BSidesSF 2025</p>
+        </div>
+      
+        <h2>Tickets</h2>
+        <p>I scored my ticket using the student discount, 50% off, through my .edu email. Definitely worth it for how much access you get to talks, workshops, villages, and the whole vibe.</p>
+      
+        <h2>Travel</h2>
+        <p>The trip started by driving from Merced to San Francisco Friday afternoon. I had two passengers, one dropped off in San Jose and another in the Mission District in SF. After handling drop-offs, I headed toward the University of San Francisco (USF) where I was staying.</p>
+      
+        <h2>Lodging</h2>
+        <p>Hotels were way too expensive, so my friend at USF let me crash at his apartment for two nights. It worked out great and it was only a 15-minute drive to the venue. We caught up over dinner at the USF dining hall. I stuck with chicken, rice, and veggies to stay on track with protein goals. Their dining system is different, you get your food first and pay after. Parking in downtown was brutal, I ended up paying about $80 total for two days at the garage because street parking is nonexistent.</p>
+        <div class="flex flex-col items-center my-8">
+          <img src="/images/usf-apartment-view.jpg" alt="usf apartment view" class="w-3/4 max-w-md rounded-lg shadow-md mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">Gorgeous view at night from my friend's apartment</p>
+        </div>
+      
+        <h2>SF Safety</h2>
+        <p>San Francisco is beautiful but it does have rough areas. You see homelessness and drug use in some pockets. 
+          During the day it’s generally fine if you're smart and stay aware.</p>
+      
+        <h2>Vibe</h2>
+        <p>The dress code was super casual with hoodies, jeans, backpacks, and hacker T-shirts everywhere. It felt natural and welcoming. Definitely not a corporate environment, which made it easy to meet people.</p>
+      
+        <h2>Coat Check</h2>
+        <p>BSides offered a coat check area for backpacks, jackets, or even small luggage. It was super useful, they gave you a ticket to pick up your stuff later. Nearby, there was a table full of free gear such as: stickers, tote bags, network equipment like cables and a random UPS (minus the battery). I grabbed one thinking I’d reverse engineer it later... but forgot it at the venue when I left. Oh well, maybe next time.</p>
+      
+        <h2>Villages</h2>
+        <ul>
+          <li><strong>Adversary</strong>: simulation story-game focused on mimicking real-world attacker behavior.</li>
+          <li><strong>Lock Picking</strong>: learned about the different techniques of how to pick locks and managed to pick all locks ranging from 1 pin to 6 pins.</li>
+          <li><strong>Embedded Systems</strong>: hands-on guided labs on topics such as web vulnerabilities, firmware hacking, etc.</li>
+          <li><strong>Hardware Challenge</strong>: hack a computer to gain access to a txt file with a secret code from another computer.</li>
+          <li><strong>Crypto & Privacy</strong>: booklet filled with challenges and puzzles.</li>
+          <li><strong>Career</strong>: gained useful insights on the cybersecurity landscape from professionals in the field.</li>
+        </ul>
+        <div class="flex flex-col items-center my-8">
+          <img src="/images/hardware-village.jpg" alt="hardware challenge village" class="w-3/4 max-w-md rounded-lg shadow-md mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">Photo taken of the hacking challenge done at the Hardware Challenge Village</p>
+        </div>
+      
+        <h2>Booths</h2>
+        <p>Big companies like Anthropic, Datadog, Wiz, and Code Red Partners had booths. A lot of AI discussions going on. I wasn't seriously job hunting, but it was useful to chat with reps about industry trends. I ended up exchanging LinkedIns with someone from Anthropic and we’re planning a coffee chat soon to talk career paths.</p>
+      
+        <h2>CTF</h2>
+        <p>There was a Capture the Flag (CTF) competition running throughout the conference. I didn’t dive too deep into it, mostly jumped in during the Saturday night party. Managed to solve a pwn challenge with my group. Shoutout to my colleague also from UC Merced who crushed it, won 1st place, and took home $1,500 in Amazon gift cards. Insane.</p>
+      
+        <h2>Key Insights Gained From The Talks</h2>
+        <ul>
+          <li><strong>Secure Defaults</strong>: You have to know the platform (cloud providers, GitHub) deeply to set secure defaults properly. Security by default is the future.</li>
+          <li><strong>GitHub and Cloud Hygiene</strong>: Master your GitHub setups, cloud configurations, because that's where vulnerabilities hide.</li>
+          <li><strong>Strategic Threat Detection</strong>: Not everything needs monitoring, focus detection efforts on assets that matter most.</li>
+          <li><strong>Entry-Level Roles</strong>: Customer support and security support roles are great entry points into the industry. They often transition directly to security engineering.</li>
+          <li><strong>AI and AppSec</strong>: Relying too much on AI-generated code without human review leads to vulnerabilities. Understand what the AI is producing.</li>
+          <li><strong>Simulation Environments</strong>: Talks on gamifying DDoS and incident response training were really engaging; fun and practical ways to simulate security crises.</li>
+        </ul>
+        <div class="flex flex-col items-center my-8">
+          <img src="/images/bsides-talk.jpg" alt="incident response talk" class="w-3/4 max-w-md rounded-lg shadow-md mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">Photo taken at the Incident Response Talk gamifying a data breach</p>
+        </div>
+      
+        <h2>Catering</h2>
+        <p>Breakfast and lunch were provided both days. It was buffet-style with plenty of meat and vegetarian options. I usually ate outside to catch the view of the city while recharging.</p>
+      
+        <h2>Saturday Night Party</h2>
+        <p>Saturday night wrapped up with a happy hour and big party. You got two drink vouchers at the bar (I handed mine off since I don’t drink). There were three full buffets, meats and soup, breads and sides, and desserts. Good food, lots of dietary options, and a dragon-themed LARPing show to top it off. It was a fun way to close out the first full day.</p>
+        <div class="flex flex-col items-center my-8">
+          <img src="/images/bsides-larp-show.jpg" alt="larp show" class="w-3/4 max-w-md rounded-lg shadow-md mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">Medieval-themed LARP show at the Saturday Night Party</p>
+        </div>
+      
+        <h2>Advice</h2>
+        <ul>
+          <li>Know your goal; networking, learning, job hunting?</li>
+          <li>Plan who you want to meet or what you want to see.</li>
+          <li>Get comfortable talking to strangers, everyone’s there to connect. If you don't know what to say, 
+            something along the lines of "What's something cool have you worked on recently?" is a great way to
+        strike up a conversation with anyone.</li>
+          <li>Pace yourself, it's a marathon, not a sprint.</li>
+        </ul>
+        <div class="flex flex-col items-center my-8">
+          <img src="/images/bsides-group.jpg" alt="bsides group" class="w-3/4 max-w-md rounded-lg shadow-md mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">Group photo taken after eating dinner in Downtown SF</p>
+        </div>
+      
+        <h2>Final Thoughts</h2>
+        <p>This was an amazing weekend alhamdullilah. I learned a ton, made meaningful connections, and caught up with an old friend at USF. 
+          I came out of it more motivated to keep pushing into cybersecurity and more confident that this is where I want to be.</p>
+        <div class="flex flex-col items-center my-8">
+          <img src="/images/bsides-closing.jpg" alt="bsides closing ceremony" class="w-3/4 max-w-md rounded-lg shadow-md mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">See you next time BSidesSF!</p>
+        </div>
+      </article>           
+    </div>
+  </section>
+
+  <!-- Theme toggle script -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      html.classList.add('dark');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+
+    toggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      icon.classList.toggle('fa-moon', !isDark);
+      icon.classList.toggle('fa-sun', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>
