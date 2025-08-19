@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Reflecting on My Summer 2025 Internship at Fiducia AI (CITRIS WIP) – Laith
+      Darras
+    </title>
+    <link rel="stylesheet" href="/styles/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Reflections on my summer internship at Fiducia AI through the CITRIS Workforce Innovation Program"
+    />
+    <meta
+      property="og:title"
+      content="Reflecting on My Summer 2025 Internship at Fiducia AI (CITRIS WIP) – Laith Darras"
+    />
+    <meta property="og:image" content="/images/preview.png" />
+    <meta
+      property="og:url"
+      content="https://laith.vercel.app/blog/summer-internship-reflection.html"
+    />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans"
+  >
+    <!-- Nav Bar -->
+    <nav
+      class="w-full pt-8 pb-4 text-2xl text-gray-700 dark:text-gray-200 sticky top-0 bg-gray-50 dark:bg-gray-800 z-50"
+    >
+      <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+        <a
+          href="/index.html"
+          class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+          title="Home"
+        >
+          <i class="fas fa-home"></i>
+        </a>
+        <div class="flex gap-6">
+          <a
+            href="/about.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="About"
+          >
+            <i class="fas fa-user"></i>
+          </a>
+          <a
+            href="/projects.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="Projects"
+          >
+            <i class="fas fa-code"></i>
+          </a>
+          <a
+            href="/blog.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="Blog"
+          >
+            <i class="fas fa-pen-nib"></i>
+          </a>
+        </div>
+        <button
+          id="theme-toggle"
+          class="hover:text-teal-600 transition"
+          title="Toggle Dark Mode"
+        >
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <section class="w-full py-20">
+      <div class="max-w-5xl mx-auto px-6 text-left">
+        <!-- Top Buttons -->
+        <div class="flex justify-between items-center mb-6 text-sm">
+          <a href="/blog.html" class="text-teal-600 hover:underline"
+            >← Back to Blog</a
+          >
+          <a href="/blog/archive.html" class="text-teal-600 hover:underline"
+            >View Archive →</a
+          >
+        </div>
+
+        <!-- Blog Header -->
+        <h1 class="text-3xl font-bold mb-2">
+          Reflecting on My Summer 2025 Internship at Fiducia AI (CITRIS WIP)
+        </h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
+          18 August 2025
+        </p>
+
+        <!-- Blog Article -->
+        <article class="prose dark:prose-invert max-w-none text-left space-y-6">
+          <p>
+            This summer, I had the opportunity to join Fiducia AI as a Software
+            Engineering Intern through the CITRIS Workforce Innovation Program
+            (WIP). CITRIS WIP is an eight-week University of California
+            internship program that helps students build in-demand skills via
+            real-world projects. Some background info on Fiducia, they're an
+            early-stage startup revolutionizing sports fan engagement with
+            AI-driven experiences. I tackled projects at the intersection of AI
+            and security. From building a malware scanner to prototyping a
+            grapevine disease detection tool, the experience was packed with
+            learning. In this post, I'll reflect on what I built and what I
+            learned.
+          </p>
+
+          <h2 class="text-2xl font-bold mt-8 mb-4">What I Built</h2>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">
+            AI-Powered Malware Scanning Module
+          </h3>
+          <p>
+            One of my primary projects was developing a malware scanning module
+            for user image uploads. This feature is crucial in any platform that
+            accepts files to ensure bad actors can't inject viruses or malicious
+            content. I integrated ClamAV (an open-source antivirus engine) with
+            a Python FastAPI backend to scan images on the fly. Technically,
+            this meant containerizing ClamAV's scanning daemon and updating its
+            virus signature database (via FreshClam) so our service could detect
+            known malware by matching file contents against thousands of virus
+            signatures. I built an API endpoint that intercepted image uploads,
+            passed them to ClamAV for scanning, ultimately returning secure
+            uploads to pass to the LLM. We also wrote unit tests to simulate
+            file uploads and ensure infected files are correctly caught. This
+            project taught me how signature-based malware detection works and
+            reinforced the importance of secure coding practices. On the
+            business side, the scanner helps protect our platform and users,
+            preventing potentially dangerous uploads from ever reaching our
+            systems. This is a big win for fan safety and trust.
+          </p>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">
+            Grapevine Fungal Disease Detector
+          </h3>
+          <p>
+            Another exciting project was the Fungal Detection Activation, a
+            prototype feature using AI to identify grapevine fungal diseases
+            from images. This was quite different from the sports domain, but it
+            showcased Fiducia's versatility and an agricultural use-case for our
+            tech. I crafted the prompts for the LLM to interpret the vision
+            model's output, for example, describing the spotted patterns and
+            asking the LLM to conclude if it's powdery mildew or black rot, and
+            to do so in plain language. I also contributed to the UI/UX design
+            of the mobile interface, ensuring the results were displayed clearly
+            with an option for multilingual support. We had the system output
+            the diagnosis and advice in English and Spanish to make it
+            accessible to more users. It was deeply rewarding to see an AI
+            feature go from idea to a visual demo. It struck me that AI
+            productization isn't just about model accuracy, it's about the user
+            experience around the model output and making it actionable.
+          </p>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">
+            Additional Contributions
+          </h3>
+          <p>
+            Beyond these major projects, I wore many hats as a startup intern. I
+            wrote unit tests to keep our code reliable, assisted in developing
+            backend APIs in both Python and Java (exposure to Spring Boot taught
+            me how robust enterprise APIs are built), and helped deploy new
+            features to our cloud environment. Working across different tech
+            stacks (from FastAPI endpoints to Spring Boot microservices) in a
+            short time sharpened my adaptability. I also practiced prompt
+            engineering in various contexts, learning how subtle wording changes
+            can significantly alter an AI's response. These technical
+            contributions made me a much stronger developer by the end of the
+            summer.
+          </p>
+
+          <h2 class="text-2xl font-bold mt-8 mb-4">Lessons Learned</h2>
+          <p>
+            My internship wasn't only about coding, actually it was rarely
+            coding. It was an immersive experience in how a startup operates.
+            Some key takeaways:
+          </p>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">
+            Aligning Tech with Business Value
+          </h3>
+          <p>
+            I learned that every engineering task should trace back to a
+            business goal. In our team meetings, we constantly discussed why a
+            feature mattered to users or clients. For example, the malware
+            scanner wasn't just a neat security add-on, it was protecting brand
+            integrity and user trust, which has real business value. Seeing how
+            my mentor (also CEO) evaluated feature priorities taught me to
+            always ask, "How does this solve the user's problem or improve the
+            product's value proposition?"
+          </p>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">
+            Collaboration, Communication & Documentation
+          </h3>
+          <p>
+            I participated in daily Scrum calls and even sat in on a
+            client-facing meeting. Initially, I was nervous to speak up, but I
+            gradually gained confidence updating the team on my progress. I also
+            discovered the importance of clear documentation and reproducibility
+            in a fast-moving project. By writing setup guides and API docs, I
+            made sure others could run my code and that my work lived beyond my
+            internship. Good documentation isn't just a "nice-to-have", it
+            enables effective collaboration and faster onboarding for new team
+            members. I now appreciate how sharing knowledge (through comments or
+            demos) is as vital as writing the code itself.
+          </p>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">
+            Cross-Functional Teamwork
+          </h3>
+          <p>
+            Working with designers, engineers, and even non-technical
+            stakeholders was eye-opening. I saw how feedback loops from
+            different perspectives improve the final product. For instance, our
+            designer's input on the fungal detection UI helped us simplify the
+            user flow, and an engineer's code review pushed me to handle edge
+            cases I hadn't considered. I learned to welcome feedback and ask
+            clarifying questions, which is a habit that improved my work quality
+            and will serve me well in any team setting.
+          </p>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">Personal Growth</h3>
+          <p>
+            This was a remote internship, which required self-direction and
+            discipline. I set daily goals and learned to unblock myself by
+            researching or asking the right questions, rather than waiting
+            passively. Over eight weeks I became much more independent as a
+            developer. I also learned to balance taking initiative with seeking
+            mentorship. My mentor (Ganesh) encouraged me to propose solutions
+            first, then he'd guide me with adjustments. This approach boosted my
+            problem-solving confidence while still providing a safety net for
+            learning. By summer's end I felt more confident not just in writing
+            code, but in designing solutions and explaining my thinking.
+          </p>
+
+          <h3 class="text-xl font-semibold mt-6 mb-3">
+            Real-World Impact of AI
+          </h3>
+          <p>
+            Perhaps the most inspiring lesson was seeing the real-world impact
+            of the technologies I worked on. I helped build a malware scanner
+            that could safeguard users in a digital community, and an AI-driven
+            tool that might help farmers detect crop diseases early. And of
+            course, Fiducia's core mission which is using AI to make sports fan
+            experiences more interactive and engaging has the potential to
+            change how we all enjoy games. This breadth, from sports
+            entertainment to agriculture and cybersecurity, showed me how
+            versatile AI technology can be. It reinforced my belief that by
+            pursuing AI and software engineering, I can contribute to solving
+            diverse, meaningful problems.
+          </p>
+
+          <h2 class="text-2xl font-bold mt-8 mb-4">Gratitude & Next Steps</h2>
+          <p>
+            I'm extremely grateful to the Fiducia AI team for welcoming me and
+            making this internship so enriching. A huge thank-you to Ganesh, my
+            mentor and manager, for his patient guidance, technical insights,
+            and for challenging me to grow. His feedback and high expectations
+            pushed me to write cleaner code and think like an engineer, not just
+            a student. I also thank the other engineers and designers who took
+            time to answer my questions and include me in important discussions.
+          </p>
+          <p>
+            Additionally, I want to thank the CITRIS Workforce Innovation
+            Program organizers for facilitating this internship. Programs like
+            CITRIS WIP are invaluable in bridging classroom learning with
+            industry experience, and I appreciate the workshops and support they
+            provided throughout the summer. Although this will be the last
+            cohort of WIP, I'm incredibly grateful to be apart of this fantastic
+            community.
+          </p>
+          <p>
+            As I head back to campus this fall, I carry with me new skills in
+            Python, Java Spring Boot, FastAPI, and prompt engineering, as well
+            as a deeper understanding of how AI products are built and
+            delivered. This internship has affirmed my passion for software
+            engineering and AI, especially building systems that are secure and
+            have positive real-world impact. In the future, I aim to dive
+            further into AI in production (maybe even exploring the
+            cybersecurity side of AI) and perhaps work at the core of AI and
+            social good.
+          </p>
+          <p>
+            As I wrap up this summer, it's important for me to think about my
+            future. In the short term, I plan to apply these lessons in my
+            coursework and personal projects such as: writing more tests,
+            documenting thoroughly, and considering the user impact of
+            everything I build. Long term, whether I end up at a startup or a
+            larger company, I feel better equipped to contribute from day one
+            thanks to this experience.
+          </p>
+          <p>
+            Concluding, my summer at Fiducia AI was a period of tremendous
+            growth. I shipped features that stretched me technically, learned
+            from inspiring mentors, and saw firsthand how innovative tech is
+            aligned with business strategy. Most importantly, I left with even
+            more excitement for the field of AI and a clearer vision of the kind
+            of engineer I want to become. I'm proud of what I accomplished in
+            those eight weeks and excited to keep building on that foundation in
+            the years ahead. Thank you, Fiducia AI and CITRIS, for an
+            unforgettable summer!
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const icon = document.getElementById("theme-icon");
+      const html = document.documentElement;
+
+      if (localStorage.getItem("theme") === "dark") {
+        html.classList.add("dark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+
+      toggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        icon.classList.toggle("fa-moon", !isDark);
+        icon.classList.toggle("fa-sun", isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+    </script>
+  </body>
+</html>
