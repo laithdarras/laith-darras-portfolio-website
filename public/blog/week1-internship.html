@@ -1,143 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Week 1 at Fiducia AI – Laith Darras</title>
-  <link rel="stylesheet" href="/styles/output.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 at Fiducia AI – Laith Darras</title>
+    <link rel="stylesheet" href="/styles/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <!-- SEO -->
-  <meta name="description" content="Reflections on my first week interning at Fiducia AI — diving into real-world RAG systems, LLMs, and mobile-scale architecture." />
-  <meta property="og:title" content="Week 1 at Fiducia AI – Laith Darras" />
-  <meta property="og:image" content="/images/preview.png" />
-  <meta property="og:url" content="https://laith.vercel.app/blog/week1-internship.html" />
-</head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
-
-  <!-- Nav Bar -->
-  <nav class="w-full pt-8 pb-4 text-2xl text-gray-700 dark:text-gray-200 sticky top-0 bg-gray-50 dark:bg-gray-800 z-50">
-    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
-      <a href="/index.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Home">
-        <i class="fas fa-home"></i>
-      </a>
-      <div class="flex gap-6">
-        <a href="/about.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="About">
-          <i class="fas fa-user"></i>
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Reflections on my first week interning at Fiducia AI — diving into real-world RAG systems, LLMs, and mobile-scale architecture."
+    />
+    <meta property="og:title" content="Week 1 at Fiducia AI – Laith Darras" />
+    <meta property="og:image" content="/images/preview.png" />
+    <meta
+      property="og:url"
+      content="https://laith.vercel.app/blog/week1-internship.html"
+    />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans"
+  >
+    <!-- Nav Bar -->
+    <nav
+      class="w-full pt-8 pb-4 text-2xl text-gray-700 dark:text-gray-200 sticky top-0 bg-gray-50 dark:bg-gray-800 z-50"
+    >
+      <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+        <a
+          href="/index.html"
+          class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+          title="Home"
+        >
+          <i class="fas fa-home"></i>
         </a>
-        <a href="/projects.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Projects">
-          <i class="fas fa-code"></i>
-        </a>
-        <a href="/blog.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Blog">
-          <i class="fas fa-pen-nib"></i>
-        </a>
+        <div class="flex gap-6">
+          <a
+            href="/about.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="About"
+          >
+            <i class="fas fa-user"></i>
+          </a>
+          <a
+            href="/projects.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="Projects"
+          >
+            <i class="fas fa-code"></i>
+          </a>
+          <a
+            href="/blog.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="Blog"
+          >
+            <i class="fas fa-pen-nib"></i>
+          </a>
+        </div>
+        <button
+          id="theme-toggle"
+          class="hover:text-teal-600 transition"
+          title="Toggle Dark Mode"
+        >
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
       </div>
-      <button id="theme-toggle" class="hover:text-teal-600 transition" title="Toggle Dark Mode">
-        <i id="theme-icon" class="fas fa-moon"></i>
-      </button>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Blog Post Content -->
-  <section class="w-full py-20">
-    <div class="max-w-5xl mx-auto px-6 text-left">
+    <!-- Blog Post Content -->
+    <section class="w-full py-20">
+      <div class="max-w-5xl mx-auto px-6 text-left">
+        <!-- Top Buttons -->
+        <div class="flex justify-between items-center mb-6 text-sm">
+          <a href="/blog.html" class="text-teal-600 hover:underline"
+            >Back to Blog</a
+          >
+          <a href="/blog/archive.html" class="text-teal-600 hover:underline"
+            >View Archive</a
+          >
+        </div>
 
-      <!-- Top Buttons -->
-      <div class="flex justify-between items-center mb-6 text-sm">
-        <a href="/blog.html" class="text-teal-600 hover:underline">← Back to Blog</a>
-        <a href="/blog/archive.html" class="text-teal-600 hover:underline">View Archive →</a>
+        <!-- Blog Header -->
+        <h1 class="text-3xl font-bold mb-2">Week 1 at Fiducia AI</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
+          07 June 2025
+        </p>
+
+        <!-- Blog Article -->
+        <article class="prose dark:prose-invert max-w-none text-left space-y-6">
+          <p>
+            This summer, I joined Fiducia AI, a startup reinventing global fan
+            engagement through AI-powered, mobile-first experiences. From day
+            one, I’ve been hands-on with real-world LLM infrastructure,
+            exploring platform capabilities and how AI is reshaping how we build
+            and scale software.
+          </p>
+
+          <p>
+            In this post, I’ll walk through what I’ve learned, how the platform
+            works under the hood, and what it’s like contributing to a
+            fast-paced, high-impact engineering environment.
+          </p>
+
+          <p>
+            <strong>Note:</strong> This post reflects my personal learning as an
+            intern. It does not represent internal company details or official
+            statements from Fiducia AI.
+          </p>
+
+          <p>
+            In traditional software engineering internships, you're often
+            dropped into a well-defined project or legacy codebase. Not here.
+          </p>
+
+          <p>
+            At Fiducia AI, interns aren’t just helping, we’re building. We’ve
+            been challenged to propose, develop, and ship a new application on
+            top of the company’s AI infrastructure which is designed to scale
+            across billions of mobile users, regardless of OS or region.
+          </p>
+
+          <p>
+            <strong>The broader technical challenge:</strong><br />
+            How do we build LLM-based applications that are fast, contextual,
+            and mobile-native, without needing users to install anything?
+          </p>
+
+          <p>
+            From a business perspective, this problem is urgent. Sports is a
+            billion-dollar industry, and fans expect personalized, real-time
+            digital experiences. Fiducia’s platform is meeting that
+            demand—without friction.
+          </p>
+
+          <h2>High-Level Solution</h2>
+          <p>
+            Before we code anything, we’re expected to master the architecture
+            behind the scenes. This week, I focused on understanding Fiducia’s
+            real-time AI pipeline and experimenting with its platform.
+          </p>
+
+          <p>
+            The core system revolves around Retrieval-Augmented Generation (RAG)
+            and embeddings, allowing developers to inject contextual knowledge
+            into LLMs on demand. Rather than relying solely on model weights,
+            Fiducia’s platform dynamically retrieves relevant context from files
+            uploaded by developers enabling more accurate and trustworthy
+            responses.
+          </p>
+
+          <p>
+            Our applications will build on this by layering problem-specific
+            logic and UX atop the existing AI backend. But first, I needed to
+            break down the platform step-by-step.
+          </p>
+
+          <h2>Deep Dive: Key Technical Highlights</h2>
+
+          <h3>RAG in Action</h3>
+          <p>
+            I ran several experiments using Fiducia’s file ingestion system,
+            uploading plain text files with deliberately conflicting information
+            and testing how the model responded. The results confirmed the
+            system’s RAG behavior: the model pulled answers from my uploaded
+            context, not from its pre-trained knowledge, which is exactly what
+            we want for enterprise-grade accuracy.
+          </p>
+
+          <p>
+            This showed me how RAG can effectively override hallucinations in an
+            LLM, provided the retrieval system is fast and well-structured.
+          </p>
+
+          <h3>Platform Flow Overview:</h3>
+          <ul>
+            <li>Attach a file</li>
+            <li>Translate to plain text (handled server-side)</li>
+            <li>Compress (value between 0–1) to optimize performance</li>
+            <li>
+              Sync to trigger an API call that embeds content into the vector DB
+            </li>
+          </ul>
+
+          <p>
+            This clarified how context gets pre-processed before inference and
+            highlighted the importance of compression settings, especially when
+            dealing with large documents.
+          </p>
+
+          <h3>Embeddings + Vector Search</h3>
+          <p>
+            I started exploring what embeddings really are: numerical
+            representations of text that allow for semantic similarity
+            comparison. When a user enters a prompt, it’s embedded, and the
+            platform uses a vector database to retrieve relevant chunks from the
+            uploaded content, within a ~500ms window. That performance target
+            blew my mind. Behind the scenes, the system is doing some serious
+            optimization work.
+          </p>
+
+          <h2>Challenges & Lessons Learned</h2>
+          <ul>
+            <li>
+              <strong>Mental Shift:</strong> This isn’t coursework, and there’s
+              no step-by-step manual. I had to switch from “follow directions”
+              mode to proactive exploration mode. It was a wake-up call, and an
+              exciting one.
+            </li>
+            <li>
+              <strong>Understanding the Stack:</strong> I initially
+              underestimated how complex “RAG” actually is. It touches file
+              processing, vector math, storage efficiency, and LLM prompt
+              engineering.
+            </li>
+            <li>
+              <strong>Platform Behavior Surprises:</strong> Some features didn’t
+              behave exactly as expected on the first try (especially around
+              compression), which pushed me to test methodically and think
+              critically.
+            </li>
+          </ul>
+
+          <h2>Takeaways</h2>
+          <p>
+            This week helped me realize that modern software engineering is less
+            about syntax and more about systems thinking. Whether you’re tuning
+            compression rates or engineering contextual prompts, you're not just
+            writing code, you're architecting an experience.
+          </p>
+
+          <p>
+            More than that, I’m starting to see how technical skill, business
+            knowledge, and product storytelling all intersect. At a startup like
+            Fiducia AI, you don’t just build. In fact, it's just as much about
+            selling and shipping fast as it is about building.
+          </p>
+
+          <p>
+            Next week, I’ll finalize a product idea and begin prototyping. My
+            focus: a mobile-first tool powered by RAG that enhances the sports
+            fan experience in real time. I can’t wait!!
+          </p>
+
+          <p>
+            If you’ve worked with RAG systems, vector search, or real-time AI
+            pipelines, I’d love to hear how you’ve approached it. And if you're
+            exploring how to build mobile-first apps with a large scale, reach
+            out. Let’s connect.
+          </p>
+
+          <p>Until next time!</p>
+        </article>
       </div>
+    </section>
 
-      <!-- Blog Header -->
-      <h1 class="text-3xl font-bold mb-2">Week 1 at Fiducia AI</h1>
-      <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">07 June 2025</p>
+    <!-- Theme toggle script -->
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const icon = document.getElementById("theme-icon");
+      const html = document.documentElement;
 
-      <!-- Blog Article -->
-      <article class="prose dark:prose-invert max-w-none text-left space-y-6">
-        <p>This summer, I joined Fiducia AI, a startup reinventing global fan engagement through AI-powered, mobile-first experiences. From day one, I’ve been hands-on with real-world LLM infrastructure, exploring platform capabilities and how AI is reshaping how we build and scale software.</p>
+      if (localStorage.getItem("theme") === "dark") {
+        html.classList.add("dark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
 
-        <p>In this post, I’ll walk through what I’ve learned, how the platform works under the hood, and what it’s like contributing to a fast-paced, high-impact engineering environment.</p>
-
-        <p><strong>Note:</strong> This post reflects my personal learning as an intern. It does not represent internal company details or official statements from Fiducia AI.</p>
-
-        <p>In traditional software engineering internships, you're often dropped into a well-defined project or legacy codebase. Not here.</p>
-
-        <p>At Fiducia AI, interns aren’t just helping, we’re building. We’ve been challenged to propose, develop, and ship a new application on top of the company’s AI infrastructure which is designed to scale across billions of mobile users, regardless of OS or region.</p>
-
-        <p><strong>The broader technical challenge:</strong><br/>
-        How do we build LLM-based applications that are fast, contextual, and mobile-native, without needing users to install anything?</p>
-
-        <p>From a business perspective, this problem is urgent. Sports is a billion-dollar industry, and fans expect personalized, real-time digital experiences. Fiducia’s platform is meeting that demand—without friction.</p>
-
-        <h2>High-Level Solution</h2>
-        <p>Before we code anything, we’re expected to master the architecture behind the scenes. This week, I focused on understanding Fiducia’s real-time AI pipeline and experimenting with its platform.</p>
-
-        <p>The core system revolves around Retrieval-Augmented Generation (RAG) and embeddings, allowing developers to inject contextual knowledge into LLMs on demand. Rather than relying solely on model weights, Fiducia’s platform dynamically retrieves relevant context from files uploaded by developers enabling more accurate and trustworthy responses.</p>
-
-        <p>Our applications will build on this by layering problem-specific logic and UX atop the existing AI backend. But first, I needed to break down the platform step-by-step.</p>
-
-        <h2>Deep Dive: Key Technical Highlights</h2>
-
-        <h3>RAG in Action</h3>
-        <p>I ran several experiments using Fiducia’s file ingestion system, uploading plain text files with deliberately conflicting information and testing how the model responded. The results confirmed the system’s RAG behavior: the model pulled answers from my uploaded context, not from its pre-trained knowledge, which is exactly what we want for enterprise-grade accuracy.</p>
-
-        <p>This showed me how RAG can effectively override hallucinations in an LLM, provided the retrieval system is fast and well-structured.</p>
-
-        <h3>Platform Flow Overview:</h3>
-        <ul>
-          <li>Attach a file</li>
-          <li>Translate to plain text (handled server-side)</li>
-          <li>Compress (value between 0–1) to optimize performance</li>
-          <li>Sync to trigger an API call that embeds content into the vector DB</li>
-        </ul>
-
-        <p>This clarified how context gets pre-processed before inference and highlighted the importance of compression settings, especially when dealing with large documents.</p>
-
-        <h3>Embeddings + Vector Search</h3>
-        <p>I started exploring what embeddings really are: numerical representations of text that allow for semantic similarity comparison. When a user enters a prompt, it’s embedded, and the platform uses a vector database to retrieve relevant chunks from the uploaded content, within a ~500ms window. That performance target blew my mind. Behind the scenes, the system is doing some serious optimization work.</p>
-
-        <h2>Challenges & Lessons Learned</h2>
-        <ul>
-          <li><strong>Mental Shift:</strong> This isn’t coursework, and there’s no step-by-step manual. I had to switch from “follow directions” mode to proactive exploration mode. It was a wake-up call, and an exciting one.</li>
-          <li><strong>Understanding the Stack:</strong> I initially underestimated how complex “RAG” actually is. It touches file processing, vector math, storage efficiency, and LLM prompt engineering.</li>
-          <li><strong>Platform Behavior Surprises:</strong> Some features didn’t behave exactly as expected on the first try (especially around compression), which pushed me to test methodically and think critically.</li>
-        </ul>
-
-        <h2>Takeaways</h2>
-        <p>This week helped me realize that modern software engineering is less about syntax and more about systems thinking. Whether you’re tuning compression rates or engineering contextual prompts, you're not just writing code, you're architecting an experience.</p>
-
-        <p>More than that, I’m starting to see how technical skill, business knowledge, and product storytelling all intersect. At a startup like Fiducia AI, you don’t just build. In fact, it's just as much about selling and shipping fast as it is about building.</p>
-
-        <p>Next week, I’ll finalize a product idea and begin prototyping. My focus: a mobile-first tool powered by RAG that enhances the sports fan experience in real time. I can’t wait!!</p>
-
-        <p>If you’ve worked with RAG systems, vector search, or real-time AI pipelines, I’d love to hear how you’ve approached it. And if you're exploring how to build mobile-first apps with a large scale, reach out. Let’s connect.</p>
-
-        <p>Until next time!</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Theme toggle script -->
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    const html = document.documentElement;
-
-    if (localStorage.getItem('theme') === 'dark') {
-      html.classList.add('dark');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    }
-
-    toggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      icon.classList.toggle('fa-moon', !isDark);
-      icon.classList.toggle('fa-sun', isDark);
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  </script>
-
-</body>
+      toggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        icon.classList.toggle("fa-moon", !isDark);
+        icon.classList.toggle("fa-sun", isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+    </script>
+  </body>
 </html>

@@ -1,317 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Week 1 at Fiducia AI – Laith Darras</title>
-  <link rel="stylesheet" href="/styles/output.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 at Fiducia AI – Laith Darras</title>
+    <link rel="stylesheet" href="/styles/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <!-- SEO -->
-  <meta name="description" content="Reflections on my first week interning at Fiducia AI — diving into real-world RAG systems, LLMs, and mobile-scale architecture." />
-  <meta property="og:title" content="Week 1 at Fiducia AI – Laith Darras" />
-  <meta property="og:image" content="/images/preview.png" />
-  <meta property="og:url" content="https://laith.vercel.app/blog/week1-internship.html" />
-</head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
-
-  <!-- Nav Bar -->
-  <nav class="w-full pt-8 pb-4 text-2xl text-gray-700 dark:text-gray-200 sticky top-0 bg-gray-50 dark:bg-gray-800 z-50">
-    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
-      <a href="/index.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Home">
-        <i class="fas fa-home"></i>
-      </a>
-      <div class="flex gap-6">
-        <a href="/about.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="About">
-          <i class="fas fa-user"></i>
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Reflections on my first week interning at Fiducia AI — diving into real-world RAG systems, LLMs, and mobile-scale architecture."
+    />
+    <meta property="og:title" content="Week 1 at Fiducia AI – Laith Darras" />
+    <meta property="og:image" content="/images/preview.png" />
+    <meta
+      property="og:url"
+      content="https://laith.vercel.app/blog/week1-internship.html"
+    />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans"
+  >
+    <!-- Nav Bar -->
+    <nav
+      class="w-full pt-8 pb-4 text-2xl text-gray-700 dark:text-gray-200 sticky top-0 bg-gray-50 dark:bg-gray-800 z-50"
+    >
+      <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+        <a
+          href="/index.html"
+          class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+          title="Home"
+        >
+          <i class="fas fa-home"></i>
         </a>
-        <a href="/projects.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Projects">
-          <i class="fas fa-code"></i>
-        </a>
-        <a href="/blog.html" class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" title="Blog">
-          <i class="fas fa-pen-nib"></i>
-        </a>
+        <div class="flex gap-6">
+          <a
+            href="/about.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="About"
+          >
+            <i class="fas fa-user"></i>
+          </a>
+          <a
+            href="/projects.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="Projects"
+          >
+            <i class="fas fa-code"></i>
+          </a>
+          <a
+            href="/blog.html"
+            class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150"
+            title="Blog"
+          >
+            <i class="fas fa-pen-nib"></i>
+          </a>
+        </div>
+        <button
+          id="theme-toggle"
+          class="hover:text-teal-600 transition"
+          title="Toggle Dark Mode"
+        >
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
       </div>
-      <button id="theme-toggle" class="hover:text-teal-600 transition" title="Toggle Dark Mode">
-        <i id="theme-icon" class="fas fa-moon"></i>
-      </button>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Blog Post Content -->
-<section class="w-full py-20">
-	<div class="max-w-5xl mx-auto px-6 text-left">
-  
-	  <!-- Top Buttons -->
-	  <div class="flex justify-between items-center mb-6 text-sm">
-		<a href="/blog.html" class="text-teal-600 hover:underline">← Back to Blog</a>
-		<a href="/blog/archive.html" class="text-teal-600 hover:underline">View Archive →</a>
-	  </div>
-  
-	  <!-- Blog Header -->
-	  <h1 class="text-3xl font-bold mb-2">Weeks 2-3 at my Internship</h1>
-	  <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">28 June 2025</p>
-  
-	  <!-- Blog Article -->
-	  <article class="prose dark:prose-invert max-w-none text-left space-y-6">
-		
-		<p>In Weeks 2 and 3 of my software engineering internship at Fiducia AI, 
-			I transitioned from developing augmented reality features for sports fan 
-			engagement to leading a new activation focused on AI-driven fungal disease 
-			detection in vineyards. During this period, I worked extensively on migrating 
-			backend services to modern frameworks, refining large language model (LLM) prompts, 
-			and improving testing and architectural practices. This post provides a detailed, 
-			technical overview of my experience, key learnings, and the challenges I tackled along the way.</p>
-  
-		<h2>Context</h2>
-		<p>Fiducia AI's platform (called SpeedShotX) delivers mobile-first "activations". They're 
-			essentially zero-code AR/AI demos that overlay digital content onto a live camera feed. 
-			In Week 2, our intern team was focused on designing a Cal Bears Women's Basketball activation, 
-			which overlays player stats and AR jerseys in a fan's camera view. By Week 3, our scope expanded: we 
-			needed to ensure the platform could easily pivot to new use cases. Leadership challenged me to 
-			propose and lead a new activation, and we decided on a vineyard "Fungal Detection" AI demo for CITRIS. 
-			The context switched from sports highlights to plant disease identification, but the underlying 
-			technical problem remained: how to apply Fiducia's core architecture (an LLM-powered, retrieval-augmented 
-			pipeline) to different domains without sacrificing quality or speed.</p>
+    <!-- Blog Post Content -->
+    <section class="w-full py-20">
+      <div class="max-w-5xl mx-auto px-6 text-left">
+        <!-- Top Buttons -->
+        <div class="flex justify-between items-center mb-6 text-sm">
+          <a href="/blog.html" class="text-teal-600 hover:underline"
+            >Back to Blog</a
+          >
+          <a href="/blog/archive.html" class="text-teal-600 hover:underline"
+            >View Archive</a
+          >
+        </div>
 
-		<h2>High-Level Idea</h2>
-		<h3>Prompt Engineering & Context Design</h3>
-        <p>On the AI side, we refined how we prompt and feed data to our LLMs. 
-		We learned that simplicity in prompts often yields the best results. For example, 
-		instead of a complex multi-step query for our basketball activation, we used a single 
-		clear instruction: "Extract the jersey numbers and explain the game setting." We also 
-		centralized our domain knowledge into a single context file (a structured .txt with roster 
-		details for the team), which the LLM could reference for factual accuracy. This context 
-		approach is essentially a lightweight form of Retrieval-Augmented Generation (RAG). This 
-		approach provides the model with relevant data on the fly.</p>
+        <!-- Blog Header -->
+        <h1 class="text-3xl font-bold mb-2">Weeks 2-3 at my Internship</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
+          28 June 2025
+        </p>
 
-		<h3>Adaptive Activation Architecture</h3>
-		<p>Perhaps most importantly, we kept the activation architecture consistent across projects. The new 
-			fungal detection activation was designed to mirror the same "capture → inference → UI" 
-			flow as the sports demo. A user captures an image (of a grapevine in this case), an inference 
-			step runs LLM logic to analyze it, and the UI displays an AR overlay with insights. By reusing 
-			this proven pipeline, we demonstrated the platform's flexibility to serve any vertical, whether 
-			that be sports or agriculture, with minimal changes to the underlying system.</p>
+        <!-- Blog Article -->
+        <article class="prose dark:prose-invert max-w-none text-left space-y-6">
+          <p>
+            In Weeks 2 and 3 of my software engineering internship at Fiducia
+            AI, I transitioned from developing augmented reality features for
+            sports fan engagement to leading a new activation focused on
+            AI-driven fungal disease detection in vineyards. During this period,
+            I worked extensively on migrating backend services to modern
+            frameworks, refining large language model (LLM) prompts, and
+            improving testing and architectural practices. This post provides a
+            detailed, technical overview of my experience, key learnings, and
+            the challenges I tackled along the way.
+          </p>
 
-		<p>With this high-level game plan, we moved into implementation. The following sections provide a 
-			deep dive into the technical highlights of these two weeks.</p>
+          <h2>Context</h2>
+          <p>
+            Fiducia AI's platform (called SpeedShotX) delivers mobile-first
+            "activations". They're essentially zero-code AR/AI demos that
+            overlay digital content onto a live camera feed. In Week 2, our
+            intern team was focused on designing a Cal Bears Women's Basketball
+            activation, which overlays player stats and AR jerseys in a fan's
+            camera view. By Week 3, our scope expanded: we needed to ensure the
+            platform could easily pivot to new use cases. Leadership challenged
+            me to propose and lead a new activation, and we decided on a
+            vineyard "Fungal Detection" AI demo for CITRIS. The context switched
+            from sports highlights to plant disease identification, but the
+            underlying technical problem remained: how to apply Fiducia's core
+            architecture (an LLM-powered, retrieval-augmented pipeline) to
+            different domains without sacrificing quality or speed.
+          </p>
 
-		<h2>Highlights</h2>
+          <h2>High-Level Idea</h2>
+          <h3>Prompt Engineering & Context Design</h3>
+          <p>
+            On the AI side, we refined how we prompt and feed data to our LLMs.
+            We learned that simplicity in prompts often yields the best results.
+            For example, instead of a complex multi-step query for our
+            basketball activation, we used a single clear instruction: "Extract
+            the jersey numbers and explain the game setting." We also
+            centralized our domain knowledge into a single context file (a
+            structured .txt with roster details for the team), which the LLM
+            could reference for factual accuracy. This context approach is
+            essentially a lightweight form of Retrieval-Augmented Generation
+            (RAG). This approach provides the model with relevant data on the
+            fly.
+          </p>
 
-		<h3>AR Activation & 3D Integration for Sports</h3>
-		<p>Delivering the Cal WBB activation was a crash course in AR development and 3D asset integration. 
-			As part of a small "3D/Action" sub-team, I worked on incorporating a 3D model of a basketball 
-			into the SpeedShotX web app. This involved uploading the jersey model in the proper format (we standardized 
-			on GLB for 3D models) and ensuring it rendered correctly on mobile devices. I learned to keep polygon 
-			counts low and file sizes small for performance. We also enforced strict media formats for all assets 
-			(MP4 for videos, JPG for images, GLB for 3D) to avoid any runtime incompatibilities across browsers.</p>
+          <h3>Adaptive Activation Architecture</h3>
+          <p>
+            Perhaps most importantly, we kept the activation architecture
+            consistent across projects. The new fungal detection activation was
+            designed to mirror the same "capture - inference - UI" flow as the
+            sports demo. A user captures an image (of a grapevine in this case),
+            an inference step runs LLM logic to analyze it, and the UI displays
+            an AR overlay with insights. By reusing this proven pipeline, we
+            demonstrated the platform's flexibility to serve any vertical,
+            whether that be sports or agriculture, with minimal changes to the
+            underlying system.
+          </p>
 
-		<p>A key challenge here was performance optimization. Large AR content can be slow to load on phones, so 
-			I researched edge caching and content compression techniques. For images, we enabled client-side 
-			compression (around 0.7 quality) before upload to reduce payload without noticeable quality loss. For 
-			3D models, I investigated lighter weight formats and how Content Delivery Networks might cache those 
-			models closer to the user. These efforts paid off in smoother, faster AR overlays, crucial for a good 
-			user experience.</p>
+          <p>
+            With this high-level game plan, we moved into implementation. The
+            following sections provide a deep dive into the technical highlights
+            of these two weeks.
+          </p>
 
-		<p>Finally, we instrumented the activation with analytics hooks, so that every user interaction (e.g. scanning 
-			the QR code) was logged on our dashboard. This data would feed back to sponsors to prove engagement ROI. 
-			This reminds us that technical success is also measured by business impact.</p>
+          <h2>Highlights</h2>
 
-		<h3>Spring Boot Migration & API Test Development</h3>
-			<p>In parallel with our activation project, I contributed to the backend team's ongoing 
-				migration effort to Spring Boot, specifically by developing robust unit tests for 
-				critical API endpoints. While the core engineering team handled refactoring Java 
-				services into Spring Boot's modern structure, my responsibility centered on ensuring 
-				endpoint reliability through comprehensive testing.</p>
-			
-			<p>I began by thoroughly reviewing recorded walkthroughs of our existing API contracts, carefully 
-				documenting request and response structures, key business logic, and any special cases. With 
-				these specifications clearly mapped out, I wrote targeted JUnit 5 unit tests covering standard 
-				usage scenarios ("happy paths") as well as various edge cases such as error handling and invalid 
-				inputs. To streamline this process, I leveraged Spring Boot's built-in testing utilities to effectively 
-				mock necessary repositories and service layers.</p>
-			
-			<p>Cursor IDE proved especially valuable here; I often prompted it to generate initial tests, such as 
-				validating correct JSON responses or HTTP status codes. Although Cursor accelerated initial drafts, 
-				I manually refined these tests, carefully ensuring accuracy, completeness, and alignment with our 
-				code quality standards.</p>
-			
-			<p>This test-driven approach played a critical role in maintaining confidence during migration, as 
-				comprehensive test coverage provided assurance that API behaviors remained consistent and stable 
-				throughout the transition.</p>
-			
-			<h3>Prompt Engineering Patterns & LLM Integration</h3>
-			<p>Another highlight of this period was deep involvement with LLM prompt engineering and integrating large 
-				language models into our workflow. Fiducia's platform uses LLMs behind the scenes to generate 
-				contextual content for activations. For example, we would prompt it to describe a player's 
-				background or explaining a detected plant disease. I learned that getting quality output from 
-				these models requires careful prompt design and context management.</p>
-			
-			<p>One pattern we adopted was prompt simplification. Early on, some of our prompts for the Cal WBB demo 
-				were too verbose, leading to inconsistent results. We switched to a strategy of one prompt = one 
-				clear task. In the jersey recognition case, the image analysis prompt became a succinct instruction 
-				focusing the model on two things: identifying jersey numbers and explaining the scene. We found this 
-				yielded far more accurate and relevant answers, confirming the adage that "single concise instructions 
-				often outperform complex prompts".</p>
-			
-			<p>Context file tuning was the other side of the equation. Rather than hard-coding lots of facts into the 
-				prompt, we maintained an external knowledge file (for the sports activation, a text file listing all 
-				players, their numbers, and key stats). Our system uses a form of retrieval-augmented generation (RAG): 
-				it can pull in relevant snippets from this file (or from a vector database) to ground the LLM's response 
-				in factual data. In practice, this meant I spent time curating the content of that file to ensure it had 
-				exactly the information the model needed (and nothing extraneous that might confuse it or cause 
-				hallucination).</p>
-			
-			<p>This tuning was critical. With a well-structured context, the model could accurately map a jersey number 
-				to a player name and even include that player's recent performance or a sponsor mention in the generated 
-				commentary. It was a great introduction to RAG architecture for me: I saw how feeding an LLM some 
-				retrieved context allows it to provide specific answers while still maintaining natural language fluency.</p>
-			
-			<p>We also explored multiple LLM options (disclosed for confidentiality) to see which best fit our needs. 
-				We compared them on response quality and speed. For instance, one was evaluated for its longer context 
-				window and stable formatting, while other models were tested for faster local inference. Though we didn't
-				 do any complex multi-model chaining in these weeks (our use case was straightforward Q&A generation, 
-				 so a single call sufficed), this exercise taught me about each model's strengths.</p>
-			
-			<p>It also underlined the importance of guardrails. We kept responses concise to avoid high token costs, and 
-				we monitored that no model output unwanted content thanks to prompt guidelines and safety filters. This 
-				careful model and prompt selection ensured the AI outputs remained accurate and on-brand for the 
-				activation.</p>
+          <h3>AR Activation & 3D Integration for Sports</h3>
+          <p>
+            Delivering the Cal WBB activation was a crash course in AR
+            development and 3D asset integration. As part of a small "3D/Action"
+            sub-team, I worked on incorporating a 3D model of a basketball into
+            the SpeedShotX web app. This involved uploading the jersey model in
+            the proper format (we standardized on GLB for 3D models) and
+            ensuring it rendered correctly on mobile devices. I learned to keep
+            polygon counts low and file sizes small for performance. We also
+            enforced strict media formats for all assets (MP4 for videos, JPG
+            for images, GLB for 3D) to avoid any runtime incompatibilities
+            across browsers.
+          </p>
 
-				<h3>Leading a New Activation: Fungal Disease Detection</h3>
-				<p>Perhaps the most exciting part of Week 3 was taking initiative to lead a brand-new 
-					activation project. With the sports demo wrapped up, I pitched an idea (endorsed by our supervisor) 
-					to build an AI-powered vineyard fungal detection tool, essentially an educational AR app for grape 
-					farmers to identify and learn about common vine diseases. Management green-lit this "Fungal Detection" 
-					activation and put me at the helm. It was a bit daunting to step up as an intern, but also 
-					thrilling to apply our platform to a completely new domain.</p>
-				
-				<p>My first task was drafting a requirements document for the feature. This spec outlined the problem 
-					(grapevine fungal infections in vineyards), the target users (vineyard owners or agricultural 
-					partners), and how our activation would work: users snap a picture of a grape leaf, the system 
-					analyzes it for signs of infection, and returns an AR overlay highlighting the disease and suggested 
-					actions. I detailed the MVP scope, focusing initially on one disease in a controlled setting 
-					("black rot" fungus on Napa Valley Cabernet grapes, for example), with an eye on future expansion 
-					to more diseases and even drone imagery analysis. This narrow-first approach was a lesson from our 
-					supervisor/mentor to avoid scope creep and ensure we deliver value before scaling up.</p>
-				
-				<p>Technically, designing the fungal activation drew on everything we learned so far. We planned to 
-					mirror the same capture-to-inference pipeline from the basketball activation. The backend would 
-					again use a RAG approach: for instance, retrieving from a vector database of plant pathology 
-					information to supplement the LLM's explanation of the diagnosis. (One of Fiducia's strengths is 
-					that its core RAG + LLM architecture can be repurposed across domains easily, which this project 
-					would validate.) On the front end, the AR overlay would draw a highlight around the infected area 
-					of the leaf and display text or audio guidance with access to multiple languages scaling it globally.</p>
-				
-				<p>Leading this effort meant not only defining the tech, but also coordinating the team. I broke the 
-					project into functional groups similar to our earlier split: one group would handle the prompt 
-					configurations, another would focus on the AR UI/UX, and a third on the knowledgebase (assembling the 
-					info on diseases for the vector store). We scheduled brainstorming sessions and I made sure to 
-					gather feedback from all interns so that everyone bought into the plan (intern unanimity was actually 
-					encouraged as a governance step before seeking senior approval). By the end of Week 3, we had a 
-					solid design and were gearing up to start building in Week 4. For me, it was a proud moment to have 
-					gone from learning the ropes to leading a project, reinforcing that at a startup, initiative and 
-					technical skills can quickly translate into real responsibility.</p>
-				
-				<h2>Challenges & Lessons Learned</h2>
-				<p>These two weeks were intense and came with a fair share of challenges. Each hurdle, however, was a 
-					learning opportunity that helped me grow as an engineer:</p>
-				
-				<ul>
-				  <li><strong>Balancing Speed with Quality:</strong> In a startup environment, we moved fast, like 
-					shipping a demo in days, but I learned that speed means little without quality. I faced the challenge 
-					of integrating AI-generated code quickly while not skipping enterprise guardrails. For example, I had 
-					to ensure every new feature had proper logging and passed security scans, and that our test coverage 
-					stayed high. This taught me to never treat testing or code review as an afterthought, no matter how 
-					tight the timeline.</li>
-				  <li><strong>Learning New Tools Under Pressure:</strong> Adopting Cursor IDE and other new tools on the 
-					fly was initially overwhelming. Early on, I over-relied on the AI suggestions and sometimes got 
-					output that didn't fit our use-case. Through trial and error, I learned to guide the tool with better 
-					prompts and to use it for what it's best at (boilerplate, refactoring), while I focused on the 
-					critical logic. The lesson here was AI tools can boost productivity, but human oversight and strong 
-					fundamentals are non-negotiable.</li>
-				  <li><strong>Prompt Engineering is an Art:</strong> Crafting prompts and context for LLMs was tricky. 
-					Just a small wording change could produce vastly different results. We encountered issues with the 
-					model sometimes ignoring parts of our prompt or getting confused by irrelevant context. Through these 
-					struggles I learned the value of prompt clarity and minimalism. Keeping instructions simple and 
-					context highly relevant led to more consistent outputs. I also discovered the importance of resetting 
-					state between runs. For instance, clearing caches to avoid stale responses when testing new 
-					prompts.</li>
-				  <li><strong>Requirement Ambiguity:</strong> At one point, we realized some features weren't well 
-					defined ("What exactly should the AI agent tell a user about a fungus?" etc.). Instead of guessing 
-					and potentially building the wrong thing, I paused to clarify these requirements with mentors. I 
-					learned to treat requirements like a contract. When something was unclear, I'd document questions 
-					and get answers before designing. This upfront communication saved us from a lot of rework, and it's 
-					a habit I'll carry forward.</li>
-				  <li><strong>Teamwork and Leadership:</strong> Working with a cohort of fellow interns, I saw firsthand 
-					how coordination and clear communication impact a project. We had a challenge where two sub-teams 
-					implemented conflicting changes to the activation config. After resolving it, we instituted daily 
-					mini stand-ups among ourselves to sync changes. When I took on leading the fungal project, I put 
-					extra effort into getting everyone's input early and establishing consensus on the plan. The 
-					experience taught me that even in a highly technical project, soft skills like alignment and 
-					knowledge sharing are crucial. A cohesive team produces better results.</li>
-				</ul>
-				
-				<h2>Takeaways</h2>
-				<p>Reflecting on Weeks 2–3, I'm amazed by how much was packed into this period. Here are my key takeaways 
-					from the experience:</p>
-				
-				<ul>
-				  <li><strong>Full-Stack Exposure:</strong> I got to work across the stack, from backend Spring Boot 
-					services and API tests to front-end AR interfaces and 3D models. This end-to-end view reinforced 
-					how different pieces must come together for a successful product.</li>
-				  <li><strong>AI in Practice:</strong> Integrating LLMs and computer vision into a real product is very 
-					different from toy examples. I learned practical techniques in prompt engineering, context management 
-					with RAG, and model selection trade-offs (speed vs. accuracy). It demystified a lot of AI "magic" and 
-					turned it into an engineering tool in my toolbox.</li>
-				  <li><strong>Quality Matters (Especially in Startups):</strong> Working in a fast-paced startup setting, 
-					I expected a "move fast and break things" vibe. Instead, I learned that moving fast and not breaking 
-					things is the real goal. Writing tests, adding logs, and monitoring performance aren't chores, but 
-					actually they're what enable rapid innovation by catching issues early and building trust in the 
-					system.</li>
-				  <li><strong>Leadership Can Come Early:</strong> I never imagined I'd be leading a project in my third 
-					week. But given the opportunity, I realized that stepping up is the fastest way to grow. By taking 
-					ownership of the fungal detection activation, I had to quickly fill in knowledge gaps and earn the 
-					team's confidence. It was challenging, but it affirmed that leadership isn't about title, it's about 
-					mindset and action.</li>
-				</ul>
-				
-				<h2>Closing Thoughts</h2>
-				<p>Weeks 2 and 3 at Fiducia AI were both intense and rewarding. I evolved from simply following along 
-					to actively contributing, and even guiding, cutting-edge AI projects. The blend of AR innovation, 
-					LLM engineering, and good ol' software craftsmanship made for an experience that pushed me beyond 
-					my comfort zone. As I head into Week 4, I'm excited to build out the Fungal Detection activation 
-					and eventually contribute to an AI assistant for our platform's FAQs. If these past weeks are any 
-					indication, there's a lot more to learn and achieve, and I'm all in for it. Stay tuned for more 
-					insights as this internship journey continues!</p>
+          <p>
+            A key challenge here was performance optimization. Large AR content
+            can be slow to load on phones, so I researched edge caching and
+            content compression techniques. For images, we enabled client-side
+            compression (around 0.7 quality) before upload to reduce payload
+            without noticeable quality loss. For 3D models, I investigated
+            lighter weight formats and how Content Delivery Networks might cache
+            those models closer to the user. These efforts paid off in smoother,
+            faster AR overlays, crucial for a good user experience.
+          </p>
 
-	  </article>
-	</div>
-  </section>
+          <p>
+            Finally, we instrumented the activation with analytics hooks, so
+            that every user interaction (e.g. scanning the QR code) was logged
+            on our dashboard. This data would feed back to sponsors to prove
+            engagement ROI. This reminds us that technical success is also
+            measured by business impact.
+          </p>
 
-  <!-- Theme toggle script -->
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    const html = document.documentElement;
+          <h3>Spring Boot Migration & API Test Development</h3>
+          <p>
+            In parallel with our activation project, I contributed to the
+            backend team's ongoing migration effort to Spring Boot, specifically
+            by developing robust unit tests for critical API endpoints. While
+            the core engineering team handled refactoring Java services into
+            Spring Boot's modern structure, my responsibility centered on
+            ensuring endpoint reliability through comprehensive testing.
+          </p>
 
-    if (localStorage.getItem('theme') === 'dark') {
-      html.classList.add('dark');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    }
+          <p>
+            I began by thoroughly reviewing recorded walkthroughs of our
+            existing API contracts, carefully documenting request and response
+            structures, key business logic, and any special cases. With these
+            specifications clearly mapped out, I wrote targeted JUnit 5 unit
+            tests covering standard usage scenarios ("happy paths") as well as
+            various edge cases such as error handling and invalid inputs. To
+            streamline this process, I leveraged Spring Boot's built-in testing
+            utilities to effectively mock necessary repositories and service
+            layers.
+          </p>
 
-    toggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      icon.classList.toggle('fa-moon', !isDark);
-      icon.classList.toggle('fa-sun', isDark);
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  </script>
+          <p>
+            Cursor IDE proved especially valuable here; I often prompted it to
+            generate initial tests, such as validating correct JSON responses or
+            HTTP status codes. Although Cursor accelerated initial drafts, I
+            manually refined these tests, carefully ensuring accuracy,
+            completeness, and alignment with our code quality standards.
+          </p>
 
-</body>
+          <p>
+            This test-driven approach played a critical role in maintaining
+            confidence during migration, as comprehensive test coverage provided
+            assurance that API behaviors remained consistent and stable
+            throughout the transition.
+          </p>
+
+          <h3>Prompt Engineering Patterns & LLM Integration</h3>
+          <p>
+            Another highlight of this period was deep involvement with LLM
+            prompt engineering and integrating large language models into our
+            workflow. Fiducia's platform uses LLMs behind the scenes to generate
+            contextual content for activations. For example, we would prompt it
+            to describe a player's background or explaining a detected plant
+            disease. I learned that getting quality output from these models
+            requires careful prompt design and context management.
+          </p>
+
+          <p>
+            One pattern we adopted was prompt simplification. Early on, some of
+            our prompts for the Cal WBB demo were too verbose, leading to
+            inconsistent results. We switched to a strategy of one prompt = one
+            clear task. In the jersey recognition case, the image analysis
+            prompt became a succinct instruction focusing the model on two
+            things: identifying jersey numbers and explaining the scene. We
+            found this yielded far more accurate and relevant answers,
+            confirming the adage that "single concise instructions often
+            outperform complex prompts".
+          </p>
+
+          <p>
+            Context file tuning was the other side of the equation. Rather than
+            hard-coding lots of facts into the prompt, we maintained an external
+            knowledge file (for the sports activation, a text file listing all
+            players, their numbers, and key stats). Our system uses a form of
+            retrieval-augmented generation (RAG): it can pull in relevant
+            snippets from this file (or from a vector database) to ground the
+            LLM's response in factual data. In practice, this meant I spent time
+            curating the content of that file to ensure it had exactly the
+            information the model needed (and nothing extraneous that might
+            confuse it or cause hallucination).
+          </p>
+
+          <p>
+            This tuning was critical. With a well-structured context, the model
+            could accurately map a jersey number to a player name and even
+            include that player's recent performance or a sponsor mention in the
+            generated commentary. It was a great introduction to RAG
+            architecture for me: I saw how feeding an LLM some retrieved context
+            allows it to provide specific answers while still maintaining
+            natural language fluency.
+          </p>
+
+          <p>
+            We also explored multiple LLM options (disclosed for
+            confidentiality) to see which best fit our needs. We compared them
+            on response quality and speed. For instance, one was evaluated for
+            its longer context window and stable formatting, while other models
+            were tested for faster local inference. Though we didn't do any
+            complex multi-model chaining in these weeks (our use case was
+            straightforward Q&A generation, so a single call sufficed), this
+            exercise taught me about each model's strengths.
+          </p>
+
+          <p>
+            It also underlined the importance of guardrails. We kept responses
+            concise to avoid high token costs, and we monitored that no model
+            output unwanted content thanks to prompt guidelines and safety
+            filters. This careful model and prompt selection ensured the AI
+            outputs remained accurate and on-brand for the activation.
+          </p>
+
+          <h3>Leading a New Activation: Fungal Disease Detection</h3>
+          <p>
+            Perhaps the most exciting part of Week 3 was taking initiative to
+            lead a brand-new activation project. With the sports demo wrapped
+            up, I pitched an idea (endorsed by our supervisor) to build an
+            AI-powered vineyard fungal detection tool, essentially an
+            educational AR app for grape farmers to identify and learn about
+            common vine diseases. Management green-lit this "Fungal Detection"
+            activation and put me at the helm. It was a bit daunting to step up
+            as an intern, but also thrilling to apply our platform to a
+            completely new domain.
+          </p>
+
+          <p>
+            My first task was drafting a requirements document for the feature.
+            This spec outlined the problem (grapevine fungal infections in
+            vineyards), the target users (vineyard owners or agricultural
+            partners), and how our activation would work: users snap a picture
+            of a grape leaf, the system analyzes it for signs of infection, and
+            returns an AR overlay highlighting the disease and suggested
+            actions. I detailed the MVP scope, focusing initially on one disease
+            in a controlled setting ("black rot" fungus on Napa Valley Cabernet
+            grapes, for example), with an eye on future expansion to more
+            diseases and even drone imagery analysis. This narrow-first approach
+            was a lesson from our supervisor/mentor to avoid scope creep and
+            ensure we deliver value before scaling up.
+          </p>
+
+          <p>
+            Technically, designing the fungal activation drew on everything we
+            learned so far. We planned to mirror the same capture-to-inference
+            pipeline from the basketball activation. The backend would again use
+            a RAG approach: for instance, retrieving from a vector database of
+            plant pathology information to supplement the LLM's explanation of
+            the diagnosis. (One of Fiducia's strengths is that its core RAG +
+            LLM architecture can be repurposed across domains easily, which this
+            project would validate.) On the front end, the AR overlay would draw
+            a highlight around the infected area of the leaf and display text or
+            audio guidance with access to multiple languages scaling it
+            globally.
+          </p>
+
+          <p>
+            Leading this effort meant not only defining the tech, but also
+            coordinating the team. I broke the project into functional groups
+            similar to our earlier split: one group would handle the prompt
+            configurations, another would focus on the AR UI/UX, and a third on
+            the knowledgebase (assembling the info on diseases for the vector
+            store). We scheduled brainstorming sessions and I made sure to
+            gather feedback from all interns so that everyone bought into the
+            plan (intern unanimity was actually encouraged as a governance step
+            before seeking senior approval). By the end of Week 3, we had a
+            solid design and were gearing up to start building in Week 4. For
+            me, it was a proud moment to have gone from learning the ropes to
+            leading a project, reinforcing that at a startup, initiative and
+            technical skills can quickly translate into real responsibility.
+          </p>
+
+          <h2>Challenges & Lessons Learned</h2>
+          <p>
+            These two weeks were intense and came with a fair share of
+            challenges. Each hurdle, however, was a learning opportunity that
+            helped me grow as an engineer:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Balancing Speed with Quality:</strong> In a startup
+              environment, we moved fast, like shipping a demo in days, but I
+              learned that speed means little without quality. I faced the
+              challenge of integrating AI-generated code quickly while not
+              skipping enterprise guardrails. For example, I had to ensure every
+              new feature had proper logging and passed security scans, and that
+              our test coverage stayed high. This taught me to never treat
+              testing or code review as an afterthought, no matter how tight the
+              timeline.
+            </li>
+            <li>
+              <strong>Learning New Tools Under Pressure:</strong> Adopting
+              Cursor IDE and other new tools on the fly was initially
+              overwhelming. Early on, I over-relied on the AI suggestions and
+              sometimes got output that didn't fit our use-case. Through trial
+              and error, I learned to guide the tool with better prompts and to
+              use it for what it's best at (boilerplate, refactoring), while I
+              focused on the critical logic. The lesson here was AI tools can
+              boost productivity, but human oversight and strong fundamentals
+              are non-negotiable.
+            </li>
+            <li>
+              <strong>Prompt Engineering is an Art:</strong> Crafting prompts
+              and context for LLMs was tricky. Just a small wording change could
+              produce vastly different results. We encountered issues with the
+              model sometimes ignoring parts of our prompt or getting confused
+              by irrelevant context. Through these struggles I learned the value
+              of prompt clarity and minimalism. Keeping instructions simple and
+              context highly relevant led to more consistent outputs. I also
+              discovered the importance of resetting state between runs. For
+              instance, clearing caches to avoid stale responses when testing
+              new prompts.
+            </li>
+            <li>
+              <strong>Requirement Ambiguity:</strong> At one point, we realized
+              some features weren't well defined ("What exactly should the AI
+              agent tell a user about a fungus?" etc.). Instead of guessing and
+              potentially building the wrong thing, I paused to clarify these
+              requirements with mentors. I learned to treat requirements like a
+              contract. When something was unclear, I'd document questions and
+              get answers before designing. This upfront communication saved us
+              from a lot of rework, and it's a habit I'll carry forward.
+            </li>
+            <li>
+              <strong>Teamwork and Leadership:</strong> Working with a cohort of
+              fellow interns, I saw firsthand how coordination and clear
+              communication impact a project. We had a challenge where two
+              sub-teams implemented conflicting changes to the activation
+              config. After resolving it, we instituted daily mini stand-ups
+              among ourselves to sync changes. When I took on leading the fungal
+              project, I put extra effort into getting everyone's input early
+              and establishing consensus on the plan. The experience taught me
+              that even in a highly technical project, soft skills like
+              alignment and knowledge sharing are crucial. A cohesive team
+              produces better results.
+            </li>
+          </ul>
+
+          <h2>Takeaways</h2>
+          <p>
+            Reflecting on Weeks 2–3, I'm amazed by how much was packed into this
+            period. Here are my key takeaways from the experience:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Full-Stack Exposure:</strong> I got to work across the
+              stack, from backend Spring Boot services and API tests to
+              front-end AR interfaces and 3D models. This end-to-end view
+              reinforced how different pieces must come together for a
+              successful product.
+            </li>
+            <li>
+              <strong>AI in Practice:</strong> Integrating LLMs and computer
+              vision into a real product is very different from toy examples. I
+              learned practical techniques in prompt engineering, context
+              management with RAG, and model selection trade-offs (speed vs.
+              accuracy). It demystified a lot of AI "magic" and turned it into
+              an engineering tool in my toolbox.
+            </li>
+            <li>
+              <strong>Quality Matters (Especially in Startups):</strong> Working
+              in a fast-paced startup setting, I expected a "move fast and break
+              things" vibe. Instead, I learned that moving fast and not breaking
+              things is the real goal. Writing tests, adding logs, and
+              monitoring performance aren't chores, but actually they're what
+              enable rapid innovation by catching issues early and building
+              trust in the system.
+            </li>
+            <li>
+              <strong>Leadership Can Come Early:</strong> I never imagined I'd
+              be leading a project in my third week. But given the opportunity,
+              I realized that stepping up is the fastest way to grow. By taking
+              ownership of the fungal detection activation, I had to quickly
+              fill in knowledge gaps and earn the team's confidence. It was
+              challenging, but it affirmed that leadership isn't about title,
+              it's about mindset and action.
+            </li>
+          </ul>
+
+          <h2>Closing Thoughts</h2>
+          <p>
+            Weeks 2 and 3 at Fiducia AI were both intense and rewarding. I
+            evolved from simply following along to actively contributing, and
+            even guiding, cutting-edge AI projects. The blend of AR innovation,
+            LLM engineering, and good ol' software craftsmanship made for an
+            experience that pushed me beyond my comfort zone. As I head into
+            Week 4, I'm excited to build out the Fungal Detection activation and
+            eventually contribute to an AI assistant for our platform's FAQs. If
+            these past weeks are any indication, there's a lot more to learn and
+            achieve, and I'm all in for it. Stay tuned for more insights as this
+            internship journey continues!
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Theme toggle script -->
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const icon = document.getElementById("theme-icon");
+      const html = document.documentElement;
+
+      if (localStorage.getItem("theme") === "dark") {
+        html.classList.add("dark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+
+      toggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        icon.classList.toggle("fa-moon", !isDark);
+        icon.classList.toggle("fa-sun", isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+    </script>
+  </body>
 </html>
-
-
