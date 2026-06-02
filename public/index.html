@@ -12,11 +12,36 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <!-- SEO -->
-  <meta name="description" content="Laith Darras – Computer Science & Engineering Student" />
+  <meta name="description" content="Laith Darras – personal website and writing" />
   <meta property="og:title" content="Laith Darras" />
   <meta property="og:image" content="/images/preview.png" />
   <meta property="og:url" content="https://laith.vercel.app" />
   <meta name="google-site-verification" content="s_duGq5ku9yPeUmN_m2LII0SQAJkCiQVRhj4b1aYRr8" />
+  <style>
+    .typewriter-cursor {
+      display: inline-block;
+      margin-left: 0.08em;
+      animation: typewriter-blink 1s step-end infinite;
+    }
+
+    @keyframes typewriter-blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .typewriter-cursor {
+        display: none;
+        animation: none;
+      }
+    }
+  </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
 
@@ -38,11 +63,6 @@
           title="About">
           <i class="fas fa-user"></i>
         </a>
-        <a href="/projects.html" 
-          class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" 
-          title="Projects">
-          <i class="fas fa-code"></i>
-        </a>
         <a href="/blog.html" 
           class="hover:text-teal-600 hover:underline transition transform hover:scale-110 duration-150" 
           title="Blog">
@@ -60,11 +80,13 @@
 <header class="flex flex-col items-center text-center mt-24 px-4">
   <!-- Profile Image -->
   <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-lg mb-6">
-    <img src="/images/outdoors-pfp.jpeg" alt="Laith Darras" class="w-full h-full object-cover" />
+    <img src="/images/Cropped-Professional-Photo.png" alt="Laith Darras" class="w-full h-full object-cover" />
   </div>
 
   <!-- Name -->
-  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-6 mb-4">Laith Darras</h1>
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mt-6 mb-4">
+    <span id="typewriter-text">Laith Darras</span><span class="typewriter-cursor" aria-hidden="true">|</span>
+  </h1>
 
   <!-- Contact Icons -->
   <div class="flex justify-center gap-6 mb-6 text-3xl text-gray-700 dark:text-gray-200">
@@ -73,12 +95,6 @@
     </a>
     <a href="https://linkedin.com/in/laith-darras" target="_blank" class="hover:text-blue-600" title="LinkedIn">
       <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://docs.google.com/document/d/1JX8aXEWqO-fFD7SiqlmcQvBU6dBxPsS4gDtrhXYvMHE/edit?usp=sharing" target="_blank" class="hover:text-indigo-600" title="Software Resume">
-      <i class="fas fa-file-code"></i>
-    </a>
-    <a href="https://docs.google.com/document/d/1h20DgmKGabox8wbKf56Fucw8NpIJZRKWONdRELpdmtU/edit?usp=sharing" target="_blank" class="hover:text-emerald-600" title="Cybersecurity Resume">
-      <i class="fas fa-user-shield"></i>
     </a>
     <a href="mailto:laith.s.darras@gmail.com" class="hover:text-red-500 dark:hover:text-red-400" title="Email">
       <i class="fas fa-envelope"></i>
@@ -92,142 +108,82 @@
   <figcaption class="text-md text-gray-500 dark:text-gray-400 mb-8">- Michael Faraday</figcaption>
 </header>
 
-
-  <!-- Positions Section -->
-<section class="w-full py-20">
+<section class="w-full pb-20">
   <div class="max-w-5xl mx-auto px-6">
-  <h2 class="text-2xl font-semibold mb-6 border-b pb-2">Positions</h2>
+    <p class="mb-6 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+      Hey there, nice to meet you!
+    </p>
 
-  <!-- Position 1: Fiducia AI -->
-  <div class="flex gap-6 mb-10">
-    <div class="w-16 h-16 rounded-full overflow-hidden shadow-sm flex-shrink-0">
-      <img src="/images/fiducia-ai.jpg" alt="Fiducia AI Logo" class="w-full h-full object-cover" />
-    </div>
-    <div>
-      <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">06/2025 – 08/2025</p>
-      <h3 class="font-semibold text-lg">
-        Software Engineer Intern @ 
-        <a href="https://www.fiduciaai.com/" target="_blank" class="text-teal-600 hover:underline">Fiducia AI</a>
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-1">
-        Built a production-ready ClamAV-based malware scanner securing AI pipelines for 
-        thousands of users, shipping tested, scalable backend features in collaboration with engineers and product teams.
-      </p>
-    </div>
-  </div>
+    <p class="mb-6 text-lg leading-8 text-gray-800 dark:text-gray-300">
+      My name is Laith. I'm a recent UC Merced graduate with a Bachelor's degree in Computer Science & Engineering. I enjoy building things and learning how they work.
+    </p>
 
-  <!-- Position 2: CodePath -->
-  <div class="flex gap-6 mb-10">
-    <div class="w-16 h-16 rounded-full overflow-hidden shadow-sm flex-shrink-0">
-      <img src="/images/codepath-logo-dark.png" alt="CodePath Logo" class="w-full h-full object-cover" />
-    </div>
-    <div>
-      <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">08/2024 – 12/2024</p>
-      <h3 class="font-semibold text-lg">
-        Technical Support Representative @ 
-        <a href="https://www.codepath.org/" target="_blank" class="text-teal-600 hover:underline">CodePath</a>
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-1">
-        Streamlined technical support for 1,000+ students in 
-        cybersecurity labs using tools like Splunk, Snort, and Wireshark, cutting issue resolution time by 40%.      </p>
-      <div class="mt-4 flex flex-wrap gap-6 justify-start">
-        <img src="/images/codepath_courseportal.png" alt="Cybersecurity portal" class="w-[70%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-        <img src="/images/cyb-img-1.png" alt="Wireshark logs" class="w-[70%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-        <img src="/images/cyb-img-2.png" alt="Splunk dashboard" class="w-[70%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-      </div>
-    </div>
-  </div>
+    <p class="mb-6 text-lg leading-8 text-gray-800 dark:text-gray-300">
+      This is my personal website.
+      I also keep a <a href="/blog.html" class="text-teal-600 hover:underline">blog</a>
+      where I write about what I'm learning, thoughts on technology, and occasional reflections on life.
+    </p>
 
-  <!-- Position 3: Network Technician -->
-  <div class="flex gap-6 mb-10">
-    <div class="w-16 h-16 rounded-full overflow-hidden shadow-sm flex-shrink-0">
-      <img src="/images/ucm-logo-dark.jpg" alt="UC Merced Logo" class="w-full h-full object-cover" />
-    </div>
-    <div>
-      <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">05/2024 – 08/2024</p>
-      <h3 class="font-semibold text-lg">
-        Student Network Technician @ 
-        <a href="https://it.ucmerced.edu/" target="_blank" class="text-teal-600 hover:underline">UC Merced</a>
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-1">
-        Audited and maintained 200+ campus nodes, diagnosing network and power issues while improving asset management by 40% and 
-        maintaining 99.9% uptime under mentorship of network engineers.
-      </p>
-      <div class="mt-4 flex flex-wrap gap-6 justify-start">
-        <img src="/images/network-tech-1.jpg" alt="power patch panel" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-        <img src="/images/network-tech-2.jpg" alt="switch cable management" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-        <img src="/images/network-tech-3.png" alt="network technician skills" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-      </div>
-    </div>
+    <p class="text-lg leading-8 text-gray-800 dark:text-gray-300">
+      If you'd like to connect, feel free to reach out by
+      <a href="mailto:laith.s.darras@gmail.com" class="text-teal-600 hover:underline">email</a>
+      or through
+      <a href="https://linkedin.com/in/laith-darras" target="_blank" class="text-teal-600 hover:underline">LinkedIn</a>.
+    </p>
   </div>
-
-  <!-- Position 4: iD Tech -->
-  <div class="flex gap-6 mb-10">
-    <div class="w-16 h-16 rounded-full overflow-hidden shadow-sm flex-shrink-0">
-      <img src="/images/idtech-dark.png" alt="iD Tech Logo" class="w-full h-full object-cover" />
-    </div>
-    <div>
-      <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">04/2024 – 08/2024</p>
-      <h3 class="font-semibold text-lg">
-        Coding Instructor @ 
-        <a href="https://www.idtech.com/" target="_blank" class="text-teal-600 hover:underline">iD Tech Camps</a>
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-1">
-        Taught Python, C++, Arduino, and cybersecurity projects to 25+ students, boosting coding proficiency by 80% and 
-        earning 95% positive parent feedback through hands-on, project-based lessons.
-      </p>
-      <div class="mt-4 flex flex-wrap gap-6 justify-start">
-        <img src="/images/idtech-1.jpg" alt="arduino student project" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-        <img src="/images/idtech-3.jpg" alt="c++ oop student project" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-      </div>
-    </div>
-  </div>
-
-  <!-- Position 5: ACM Cyber Lead -->
-  <div class="flex gap-6 mb-10">
-    <div class="w-16 h-16 rounded-full overflow-hidden shadow-sm flex-shrink-0">
-      <img src="/images/acm-logo.png" alt="ACM Logo" class="w-full h-full object-cover" />
-    </div>
-    <div>
-      <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">08/2023 – 05/2024</p>
-      <h3 class="font-semibold text-lg">
-        Special Interest Group Cybersecurity Lead @ 
-        <a href="https://acmucmerced.com/" target="_blank" class="text-teal-600 hover:underline">ACM at UC Merced</a>
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-1">
-        Led workshops and CTFs, growing participation by 75% and helping students gain practical experience in 
-        vulnerability assessment, packet analysis, and security tooling.
-      </p>
-      <div class="mt-4 flex flex-wrap gap-6 justify-start">
-        <img src="/images/acm-1.JPG" alt="tabling" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-        <img src="/images/acm-2.JPG" alt="workshop" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-      </div>
-    </div>
-  </div>
-
-  <!-- Position 6: Open Avenues -->
-  <div class="flex gap-6 mb-10">
-    <div class="w-16 h-16 rounded-full overflow-hidden shadow-sm flex-shrink-0">
-      <img src="/images/open-avenues-logo.png" alt="Open Avenues Logo" class="w-full h-full object-cover" />
-    </div>
-    <div>
-      <p class="text-sm text-gray-500 dark:text-gray-200 mb-1">09/2022 – 11/2022</p>
-      <h3 class="font-semibold text-lg">
-        Data Scientist @ 
-        <a href="https://www.openavenuesfoundation.org/" target="_blank" class="text-teal-600 hover:underline">Open Avenues Foundation</a>
-      </h3>
-      <p class="text-gray-700 dark:text-gray-300 mt-1">
-        Built a dashboard analyzing 10,000-user Twitter data, uncovering 50+ insights that improved decision-making speed by 40%.
-      </p>
-      <div class="mt-4 flex flex-wrap gap-6 justify-start">
-        <img src="/images/datascience-1.png" alt="dashboard data analysis results" class="w-[50%] h-auto rounded-lg border border-gray-200 object-cover mb-6" />
-      </div>
-    </div>
-  </div>
-</div>
 </section>
 
 <script>
+  (() => {
+    const text = document.getElementById('typewriter-text');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const staticText = 'Laith Darras';
+
+    if (!text || reducedMotion.matches) {
+      if (text) text.textContent = staticText;
+      return;
+    }
+
+    const words = ['Builder', 'Breaker', staticText];
+    const typeDelay = 100;
+    const deleteDelay = 70;
+    const pauseDelay = 1500;
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const tick = () => {
+      const currentWord = words[wordIndex];
+
+      if (isDeleting) {
+        charIndex -= 1;
+        text.textContent = currentWord.slice(0, charIndex);
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        window.setTimeout(tick, deleteDelay);
+        return;
+      }
+
+      charIndex += 1;
+      text.textContent = currentWord.slice(0, charIndex);
+
+      if (charIndex === currentWord.length) {
+        isDeleting = true;
+        window.setTimeout(tick, pauseDelay);
+        return;
+      }
+
+      window.setTimeout(tick, typeDelay);
+    };
+
+    text.textContent = '';
+    tick();
+  })();
+
   const toggle = document.getElementById('theme-toggle');
   const icon = document.getElementById('theme-icon');
   const html = document.documentElement;
