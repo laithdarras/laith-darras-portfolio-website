@@ -1,20 +1,43 @@
-# Laith Darras – Portfolio Website
+# Personal Website
 
-This is my personal portfolio built with **HTML**, **JavaScript**, and **Tailwind CSS**. It's deployed on [Vercel](https://laith.vercel.app) and structured as a clean website.
+Source code for my personal website
 
----
+Website: https://www.laithd.xyz
 
 ## Tech Stack
 
-- HTML + JS (Vanilla)
-- Tailwind CSS (v3.x, using CLI)
-- PostCSS + Autoprefixer
-- Live Server (local dev)
-- Deployed via Vercel
+* HTML
+* Vanilla JS
+* Tailwind CSS
+* PostCSS
+* Autoprefixer
+* Vercel
 
----
+## Local Development
 
-## Local Development side notes for me
+Install dependencies:
 
-- ALWAYS work inside the `public/` directory when using `live-server` command to view website w/o pushing to production!
-- run `npm run build` when ready to deploy
+```bash
+npm install
+```
+
+Start Tailwind in watch mode:
+
+```bash
+npm run dev
+```
+
+Run Live Server from the `public/` directory to preview the site locally.
+
+## Build
+
+Generate the production CSS bundle:
+
+```bash
+npm run build
+```
+
+## Notes
+
+* Run Live Server from the `public/` directory.
+* Run `npm run build` before deploying changes.
